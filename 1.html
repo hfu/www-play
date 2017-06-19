@@ -10,19 +10,19 @@ body { margin:0; padding:0; }
 </style>
 </head>
 <body>
-<canvas id="canvasOne">
+<canvas id="map">
 Your browser does not support HTML5 Canvas.
 </canvas>
 <script>
 window.addEventListener("load", eventWindowLoaded, false);
 
 function eventWindowLoaded() {
-  var wwd = new WorldWind.WorldWindow("canvasOne");
-  wwd.addLayer(new WorldWind.BMNGOneImageLayer());
-  wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer());
-  wwd.addLayer(new WorldWind.CompassLayer());
-  wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
-  wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+  var map = new WorldWind.WorldWindow("map");
+  map.addLayer(new WorldWind.BMNGOneImageLayer());
+  map.addLayer(new WorldWind.BingAerialWithLabelsLayer());
+  map.addLayer(new WorldWind.CompassLayer());
+  map.addLayer(new WorldWind.CoordinatesDisplayLayer(map));
+  map.addLayer(new WorldWind.ViewControlsLayer(map));
 }
 </script>
 </body>
